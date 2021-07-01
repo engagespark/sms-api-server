@@ -91,7 +91,8 @@ func (r *Receiver) handlePDU(w Writer) {
 		case pdu.DeliverSMID:
 			resp := pdu.NewDeliverSMResp()
 			resp.Header().Seq = body.Header().Seq
-			w.Write(resp)
+			err := w.Write(resp)
+			log.Printf("acked delivery: %s", err)
 		default:
 			log.Printf("unhandled reply: %T %#v", body, body)
 		}
