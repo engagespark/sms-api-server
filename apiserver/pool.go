@@ -43,6 +43,7 @@ func newPool() *deliveryPool {
 // It broadcasts received messages and delivery receipt to all registered
 // peers.
 func (pool *deliveryPool) Handler(p pdu.Body) {
+	log.Printf("incoming message: %T %#v", p, p)
 	switch p.Header().ID {
 	case pdu.DeliverSMID:
 		f := p.Fields()
