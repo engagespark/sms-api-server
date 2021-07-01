@@ -83,6 +83,8 @@ func (r *Receiver) bindFunc(c Conn) error {
 func (r *Receiver) handlePDU(w Writer) {
 	for {
 		body, err := r.conn.Read()
+		log.Printf("msg: %T %#v", body, body)
+		fmt.Printf("msgfmt: %T %#v", body, body)
 		if err != nil {
 			break
 		}
