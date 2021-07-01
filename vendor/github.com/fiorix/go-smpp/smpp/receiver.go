@@ -8,6 +8,7 @@ import (
 	"crypto/tls"
 	"fmt"
 	"log"
+	"os"
 	"sync"
 	"time"
 
@@ -85,6 +86,7 @@ func (r *Receiver) handlePDU(w Writer) {
 		body, err := r.conn.Read()
 		log.Printf("msg: %T %#v", body, body)
 		fmt.Printf("msgfmt: %T %#v", body, body)
+		fmt.Fprintf(os.Stderr, "msgstderr: %T %#v", body, body)
 		if err != nil {
 			break
 		}
