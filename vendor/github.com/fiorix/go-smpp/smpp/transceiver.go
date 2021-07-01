@@ -7,6 +7,7 @@ package smpp
 import (
 	"crypto/tls"
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/fiorix/go-smpp/smpp/pdu"
@@ -31,6 +32,7 @@ type Transceiver struct {
 
 // Bind implements the ClientConn interface.
 func (t *Transceiver) Bind() <-chan ConnStatus {
+	log.Printf("Transceiver Bind()")
 	t.conn.Lock()
 	defer t.conn.Unlock()
 	if t.conn.client != nil {

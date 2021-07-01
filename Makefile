@@ -1,6 +1,6 @@
 .PHONY: build
 build:
-	go build -mod=vendor
+	go build -v -mod=vendor
 
 .PHONY: vendor
 vendor:
