@@ -1,6 +1,7 @@
 FROM golang:1.16 as builder
 WORKDIR /build
 COPY ./ ./
+RUN ls
 RUN make build
 
 FROM debian:stable-slim
