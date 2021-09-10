@@ -21,6 +21,7 @@ func TestDeliveryStore(t *testing.T) {
 	f := p.Fields()
 	f.Set(pdufield.SourceAddr, "bart")
 	f.Set(pdufield.DestinationAddr, "lisa")
+	f.Set(pdufield.ESMClass, nil)
 	f.Set(pdufield.ShortMessage, want)
 	pool.Handler(p)
 	select {
