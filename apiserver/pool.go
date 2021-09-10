@@ -87,6 +87,7 @@ func (pool *deliveryPool) Unregister(id uint64) {
 // Broadcast broadcasts the given delivery receipt to all registered peers.
 func (pool *deliveryPool) Broadcast(r *DeliveryReceipt) {
 	pool.mu.Lock()
+	log.Printf("broadcasting dlr to %d peers: %s->%s, text:%s, id:%s", len(pool.m), r.Src, r.Dst, r.Text, r.LocalID)
 	for _, c := range pool.m {
 		select {
 		case c <- r:
