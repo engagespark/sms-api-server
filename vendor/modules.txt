@@ -1,7 +1,5 @@
-# github.com/fiorix/go-smpp v0.0.0-20210403173735-2894b96e70ba
-## explicit
 # github.com/fiorix/go-smpp/v2 v2.0.0-20210507124410-a82a321cf1d8 => github.com/alicebob/go-smpp/v2 v2.0.0
-## explicit
+## explicit; go 1.15
 github.com/fiorix/go-smpp/v2/smpp
 github.com/fiorix/go-smpp/v2/smpp/encoding
 github.com/fiorix/go-smpp/v2/smpp/pdu
@@ -16,13 +14,14 @@ github.com/go-web/httplog
 ## explicit
 github.com/go-web/httpmux
 # github.com/julienschmidt/httprouter v1.3.0
-## explicit
+## explicit; go 1.7
 github.com/julienschmidt/httprouter
-# golang.org/x/net v0.0.0-20210525063256-abc453219eb5
-## explicit
+# golang.org/x/net v0.20.0
+## explicit; go 1.18
 golang.org/x/net/context
 golang.org/x/net/websocket
-# golang.org/x/text v0.3.6
+# golang.org/x/text v0.14.0
+## explicit; go 1.18
 golang.org/x/text/encoding
 golang.org/x/text/encoding/charmap
 golang.org/x/text/encoding/internal
