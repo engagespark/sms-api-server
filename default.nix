@@ -35,7 +35,7 @@ in
          ];
         };
         config = {
-          Cmd = [ "/bin/sms-api-server" "-public" "/pub"];
+          Entrypoint = [ "/bin/sms-api-server" "-public" "/pub"];
         };
         compressor = "none"; # need this for `crane`
     };
