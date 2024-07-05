@@ -30,7 +30,7 @@ in
          ];
         };
     config = {
-      Cmd = [ "/bin/smppd" ];
+      Cmd = [ "/bin/sms-api-server" ];
     };
     compressor = "none"; # need this for `crane`
   };
