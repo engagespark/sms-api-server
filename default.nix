@@ -1,5 +1,6 @@
-with import <nixpkgs> {};
 let
+    sources = import ./npins/default.nix;
+    pkgs = import sources.nixpkgs { };
     smppd = pkgs.buildGoModule {
       name = "smppd";
       #buildInputs = [ gocache ];
