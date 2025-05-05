@@ -1,6 +1,6 @@
 module github.com/engagespark/sms-api-server
 
-go 1.22
+go 1.24
 
 require (
 	github.com/fiorix/go-smpp/v2 v2.0.0-20210507124410-a82a321cf1d8
