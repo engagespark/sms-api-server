@@ -40,5 +40,9 @@ in
         };
         compressor = "none"; # need this for `crane`
     };
-
+    shell = pkgs.mkShellNoCC {
+      packages = [
+        pkgs.npins
+      ];
+	};
 }
